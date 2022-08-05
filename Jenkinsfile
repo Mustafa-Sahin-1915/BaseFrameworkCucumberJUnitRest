@@ -23,8 +23,8 @@ pipeline{
         stage('cucumber reports'){
             steps{
                 cucumber buildStatus:"UNSTABLE",
-                         fileIncludePattern: '**/json-reports/*.json',
-                         jsonReportDirectory: 'target'
+                         fileIncludePattern: '**/*.json',
+                         jsonReportDirectory: 'target/json-reports'
 
             }
         }
@@ -37,6 +37,7 @@ pipeline{
                                        failedScenariosNumber: 1,
                                        skippedStepsNumber: 1,
                                        failedStepsNumber: 1,
+                                       jsonReportDirectory: 'target/json-reports',
                                        fileIncludePattern: '**/*.json',
                                        sortingMethod: 'ALPHABETICAL'
 
@@ -48,6 +49,7 @@ pipeline{
                                                 failedScenariosNumber: 0,
                                                 skippedStepsNumber: 0,
                                                 failedStepsNumber: 0,
+                                                jsonReportDirectory: 'target/json-reports',
                                                 fileIncludePattern: '**/*.json',
                                                 sortingMethod: 'ALPHABETICAL'
               }
