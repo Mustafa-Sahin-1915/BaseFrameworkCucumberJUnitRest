@@ -25,6 +25,7 @@
         <maven-failsafe-plugin.version>3.0.0-M1</maven-failsafe-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M1</maven-surefire-plugin.version>
         <maven-cucumber-reporting.version>5.0.0</maven-cucumber-reporting.version>
+        <cucumber-picocontainer.version>7.5.0</cucumber-picocontainer.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -99,6 +100,14 @@
             <artifactId>jackson-datatype-jdk8</artifactId>
             <version>${jackson-datatype-jdk8.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>${cucumber-picocontainer.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
