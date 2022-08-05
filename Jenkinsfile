@@ -52,6 +52,9 @@ pipeline{
                                                 fileIncludePattern: '**/*.json',
                                                 sortingMethod: 'ALPHABETICAL'
               }
+              always{
+                junit '**/surefire-reports/*.xml'
+              }
 
       }
 
