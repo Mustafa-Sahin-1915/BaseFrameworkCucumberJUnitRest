@@ -8,7 +8,7 @@ pipeline{
         stage('compile'){
             steps{
                 withMaven(maven:'maven3'){
-                    mvn clean install
+                    sh "mvn clean install"
                 }
             }
 
@@ -16,7 +16,7 @@ pipeline{
         stage('test'){
             steps{
                 withMaven(maven:'maven3'){
-                    mvn test
+                    sh "mvn test"
                 }
             }
         }
@@ -43,9 +43,7 @@ pipeline{
               slackSend color: 'red', message: "${params.reportname} Tests failed. >> Click to view <$reportUrl|report>"
 
       	     }
-
       	      success {
-
               echo "Test succeeded"
                          cucumber buildStatus: 'SUCCESS',
                                                 failedFeaturesNumber: 0,
