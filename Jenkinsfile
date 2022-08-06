@@ -12,7 +12,8 @@ pipeline{
                         if (isUnix()){
                             sh "mvn clean compile"
                         }else{
-                            bat(/"mvn clean compile/")
+                            echo "windows"
+                            bat("mvn clean compile")
                         }
                     }
 
@@ -26,7 +27,8 @@ pipeline{
                         if (isUnix()){
                             sh "mvn test"
                         }else{
-                            bat(/"mvn test/")
+                            echo "windows"
+                            bat("mvn test")
                         }
                     }
 
