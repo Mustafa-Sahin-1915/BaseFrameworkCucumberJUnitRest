@@ -8,14 +8,22 @@ pipeline{
         stage('compile'){
             steps{
                 withMaven(maven:'maven3'){
-                    bat "mvn clean compile"
+                    if (isUnix()){
+                       sh "mvn clean compile"
+                    }else{
+                       bat "mvn clean compile"
+                    }
                 }
             }
         }
         stage('test'){
             steps{
                 withMaven(maven:'maven3'){
-                    bat "mvn test"
+                    if (isUnix()){
+                       sh "mvn test"
+                    }else{
+                       bat "mvn test"
+                    }
                 }
             }
         }
