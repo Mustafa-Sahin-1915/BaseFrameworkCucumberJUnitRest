@@ -1,4 +1,4 @@
-node{
+pipeline{
     agent any
     environment {
         //Project Configurations
@@ -8,22 +8,28 @@ node{
         stage('compile'){
             steps{
                 withMaven(maven:'maven3'){
-                    if (isUnix()){
-                       sh "mvn clean compile"
-                    }else{
-                       bat "mvn clean compile"
+                    script{
+                        if (isUnix()){
+                            sh "mvn clean compile"
+                        }else{
+                            bat(/"mvn clean compile/")
+                        }
                     }
+
                 }
             }
         }
         stage('test'){
             steps{
                 withMaven(maven:'maven3'){
-                    if (isUnix()){
-                       sh "mvn test"
-                    }else{
-                       bat "mvn test"
+                    script{
+                        if (isUnix()){
+                            sh "mvn test"
+                        }else{
+                            bat(/"mvn test/")
+                        }
                     }
+
                 }
             }
         }
