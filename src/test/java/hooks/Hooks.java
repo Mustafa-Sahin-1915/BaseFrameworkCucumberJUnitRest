@@ -5,6 +5,9 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.picocontainer.DefaultPicoContainer;
+import org.picocontainer.injectors.SetterInjection;
+import pages.InternetHerokuappCheckBoxes;
 import utilities.Driver;
 
 public class Hooks {
@@ -13,6 +16,7 @@ public class Hooks {
     public void setUp(){
 
     }
+
     @After(value = "@ui")
     public void tearDown(Scenario scenario){
         if (scenario.isFailed()){

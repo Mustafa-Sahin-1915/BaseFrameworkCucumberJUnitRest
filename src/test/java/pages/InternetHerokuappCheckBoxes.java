@@ -10,6 +10,7 @@ import java.util.List;
 public class InternetHerokuappCheckBoxes extends BasePage{
 
     public InternetHerokuappCheckBoxes() {
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
