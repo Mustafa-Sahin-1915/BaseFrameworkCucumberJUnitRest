@@ -101,13 +101,8 @@
             <artifactId>jackson-datatype-jdk8</artifactId>
             <version>${jackson-datatype-jdk8.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
-            <version>${cucumber-picocontainer.version}</version>
-            <scope>test</scope>
-        </dependency>
+
+
 
     </dependencies>
 

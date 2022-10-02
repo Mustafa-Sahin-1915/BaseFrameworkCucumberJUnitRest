@@ -21,10 +21,10 @@ Feature: This is sample feature
       | webpage                |
       | https://www.google.com |
  */
-    private GooglePage googlePage;
+    private GooglePage googlePage = new GooglePage();
 
-    public SampleScenarioStepDefs(GooglePage googlePage) {
-        this.googlePage = googlePage;
+    public SampleScenarioStepDefs() {
+
     }
 
     @Given("As a user go to the {string} page")

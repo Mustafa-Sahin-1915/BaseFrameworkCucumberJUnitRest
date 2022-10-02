@@ -3,7 +3,6 @@ package runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-import utilities.PicoDependencyInjector;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -18,8 +17,7 @@ import utilities.PicoDependencyInjector;
 
         features = "./src/test/resources/features",//path od features folder
         glue = {"hooks", "stepdefinitions"},//path of the step definitions folder
-        tags = "@samplescenario2",
-        objectFactory = utilities.PicoDependencyInjector.class,
+        tags = "",
         dryRun = false
 )
 

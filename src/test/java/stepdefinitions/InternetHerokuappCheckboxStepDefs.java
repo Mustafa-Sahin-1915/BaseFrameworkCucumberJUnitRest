@@ -3,20 +3,16 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import org.picocontainer.DefaultPicoContainer;
-import org.picocontainer.annotations.Inject;
-import org.picocontainer.injectors.SetterInjection;
+
 import pages.InternetHerokuappCheckBoxes;
 import utilities.Driver;
 public class InternetHerokuappCheckboxStepDefs {
-    @Inject
-    private InternetHerokuappCheckBoxes checkBoxesPage;
+
+    private InternetHerokuappCheckBoxes checkBoxesPage = new InternetHerokuappCheckBoxes();
     public InternetHerokuappCheckboxStepDefs() {
 
     }
-    public void setCheckBoxesPage(InternetHerokuappCheckBoxes checkBoxesPage) {
-        this.checkBoxesPage = checkBoxesPage;
-    }
+
     @Then("As a user verify the page title is {string}")
     public void as_a_user_verify_the_page_title_is(String pageTitle) {
         String title = Driver.getDriver().getTitle();

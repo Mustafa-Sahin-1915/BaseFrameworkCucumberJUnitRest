@@ -5,8 +5,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.picocontainer.DefaultPicoContainer;
-import org.picocontainer.injectors.SetterInjection;
 import pages.InternetHerokuappCheckBoxes;
 import utilities.Driver;
 
